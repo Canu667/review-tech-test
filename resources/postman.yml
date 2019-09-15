@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "9ac892cc-da39-40fb-8b6a-a7f02a22fe8b",
+		"name": "Reviews",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all hotel chains",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost/api/v1/chains",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"chains"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all hotels from chain",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost/api/v1/chains/2a964bb8-58c9-4c4d-9ca5-b4234b4329dc/hotels",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"chains",
+						"2a964bb8-58c9-4c4d-9ca5-b4234b4329dc",
+						"hotels"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all reviews for a hotel",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost/api/v1/hotels/3c848009-8172-4373-9635-0c3153601ba6/reviews",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"hotels",
+						"3c848009-8172-4373-9635-0c3153601ba6",
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all hotels",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost/api/v1/hotels",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"hotels"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get an average score for a hotel",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost/api/v1/reviews/1f451fb2-8ee5-4716-8ba2-dc308f6d842e/average",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"reviews",
+						"1f451fb2-8ee5-4716-8ba2-dc308f6d842e",
+						"average"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get the script content",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost/widget/1f451fb2-8ee5-4716-8ba2-dc308f6d842e.js",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"widget",
+						"1f451fb2-8ee5-4716-8ba2-dc308f6d842e.js"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

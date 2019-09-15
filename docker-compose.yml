@@ -1,0 +1,35 @@
+version: '3'
+services:
+    hotel-nginx:
+        image: nginx:latest
+        ports:
+            - "80:80"
+        volumes:
+            - ./devops/nginx/hotel-nginx.conf:/etc/nginx/conf.d/default.conf
+            - ./public/static:/static
+        links:
+            - hotel-app
+
+    hotel-app:
+        container_name: hotel-app
+        image: nanoninja/php-fpm
+        expose:
+            - "9000"
+        volumes:
+            - .:/var/www/html
+            - ./devops/wait-for-it.sh:/var/www/html/wait-for-it.sh
+        links:
+            - db
+        depends_on:
+            - db
+
+    db:
+        container_name: hotel-db
+        image: mysql:5.7
+        environment:
+            MYSQL_ROOT_PASSWORD: admin1234
+            MYSQL_DATABASE: hotels
+            MYSQL_USER: garson
+            MYSQL_PASSWORD: meLikeIt
+        ports:
+            - "3306:3306"
