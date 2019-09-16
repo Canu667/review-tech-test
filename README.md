@@ -22,6 +22,8 @@ To run the project please run `make install` and then `make runTests`.
 After the project is started and running on `localhost` the following are available:
 - There is Swagger documentation available under `http://localhost/openapi.json`.
 
+- The widget can be found in `./public/static/widget`. It has been generated for only one hotel - to make it work for a different one, create the a `{{UUID}}.js` inside `./public/static/widget` and copy the content from the current widget. 
+
 - The website with the widget is available under the address `http://localhost/HotelTestWebsite.html`.
 
 - In the `resources` directory there is also a postman collection available, if you would like to test the endpoints manually.
